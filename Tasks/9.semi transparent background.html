@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modal Overlay Example</title>
+<style>
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+}
+
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #eee;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+
+<button id="open-modal-button">Open Modal</button>
+<p>This is button takes us to modal page,which can be overlayed on this page when we click above button.</p>
+
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <h2>This is tranparent block.</h2>
+        <p>This block overlayed on previous block.when we click close we can see previous page</p>
+        <button class="close-button" id="close-button">Close</button>
+    </div>
+</div>
+
+
+<script>
+
+const openModalButton = document.getElementById('open-modal-button');
+
+const modalOverlay = document.getElementById('modal-overlay');
+
+const closeButton = document.getElementById('close-button');
+
+
+function openModal() {
+    modalOverlay.style.display = 'flex'; 
+}
+
+
+function closeModal() {
+    modalOverlay.style.display = 'none'; 
+}
+
+openModalButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', function(event) {
+    if (event.target === modalOverlay) {
+        closeModal();
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: pink;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar li {
+            float: left;
+        }
+
+        #navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #navbar li a:hover {
+            background-color: green;
+        }
+
+        .content {
+            padding-top: 60px; 
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        #home {
+            background-color: bisque;
+        }
+
+        #about {
+            background-color: green;
+        }
+
+        #services {
+            background-color: hotpink;
+        }
+
+        #contact {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="#home" target="_blank">Home</a></li>
+            <li><a href="#about" target="_blank">About</a></li>
+            <li><a href="#services" target="_blank">Services</a></li>
+            <li><a href="#contact" target="_blank">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="home" class="section">
+            <h1>Home</h1>
+            <p>Welcome to our website! Here you will find various resources and information about our services. We aim to provide the best experience for our users.</p>
+            <p>Our website is designed to be user-friendly and accessible. Whether you are looking for information about our company, services, or want to get in touch, you will find everything you need right here.</p>
+            <p>We have a dedicated team that works around the clock to ensure that our content is up-to-date and relevant. We value our users' feedback and are constantly striving to improve our offerings.</p>
+            <p>Explore our website to learn more about what we do and how we can help you achieve your goals. Our services range from web development to digital marketing and IT consulting. Each of these services is tailored to meet the specific needs of our clients.</p>
+            <p>Stay connected with us through our social media channels and subscribe to our newsletter for the latest updates. We are here to help you succeed and look forward to working with you.</p>
+            <p>If you have any questions or need further information, please do not hesitate to reach out. Our contact page has all the details you need to get in touch with us. We are always here to assist you.</p>
+        </div>
+        <div id="about" class="section">
+            <h1>About</h1>
+            <p>Our company was founded with the mission to deliver exceptional quality and service. With years of experience in the industry, we are committed to meeting the needs of our clients.</p>
+            <p>We believe in the power of technology to transform businesses and improve lives. Our team is passionate about what we do, and we are dedicated to providing innovative solutions that drive success.</p>
+        </div>
+        <div id="services" class="section">
+            <h1>Services</h1>
+            <p>We offer a wide range of services to cater to your needs, including:</p>
+            <ul>
+                <li>Web Development: Creating responsive and visually appealing websites.</li>
+                <li>Digital Marketing: Helping you reach a wider audience through targeted campaigns.</li>
+                <li>IT Consulting: Providing expert advice and solutions for your IT challenges.</li>
+            </ul>
+            <p>Our team of experts is here to help you achieve your goals. We work closely with our clients to understand their requirements and deliver customized solutions that meet their needs.</p>
+        </div>
+        <div id="contact" class="section">
+            <h1>Contact</h1>
+            <p>If you have any questions or would like to get in touch with us, please visit our contact page. We look forward to hearing from you and assisting you with your inquiries.</p>
+            <p>You can reach us via email, phone, or through our social media channels. We are always here to help and provide the support you need.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout with Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .sidebar {
+            float: left; 
+            width: 25%; 
+            background-color: pink;
+            padding: 20px;
+        }
+        .main-content {
+            float: right; 
+            width: 75%; 
+            background-color: hotpink;
+            padding: 20px;
+        }
+        
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="sidebar">
+            
+            <h2>Sidebar</h2>
+            <p>This is the sidebar content.</p>
+        </div>
+        <div class="main-content">
+            
+            <h1>Main Content</h1>
+            <p>This is the main content area.</p>
+        </div>
+    </div>
+</body>
+</html>
